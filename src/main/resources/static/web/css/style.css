@@ -1,0 +1,90 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+}
+
+.account {
+    background: #FF914D;
+    //background: linear-gradient(45deg, #ee0979, #ff6a00);
+    color: white;
+    box-shadow: 1px 1px 5px black;
+    border-radius: 2rem;
+}
+
+.account:hover {
+    box-shadow: 5px 5px 15px white;
+}
+
+.account-details-header {
+    background: #FF914D;
+    //background: linear-gradient(45deg, #ee0979, #ff6a00);
+    color: white;
+}
+
+.account-balance {
+    font-size: 2em;
+    margin: 0px;
+}
+
+.account-link {
+    text-decoration: none;
+}
+
+.subtitle {
+    display: inline;
+}
+
+#create {
+    margin-bottom: 15px;
+}
+
+.credit-transaction {
+    color: green;
+}
+
+.debit-transaction {
+    color: red;
+}
+
+.loan {
+    background: linear-gradient(45deg, #ee09cf, #0026ff);
+    color: white;
+}
+
+.menu-logo {
+    width: 20rem;
+    height: 8rem;
+}
+
+.welcome {
+    background: black;
+    //background: linear-gradient(45deg, #5573f8cc, #2d0a66);
+}
+
+.welcome-logo {
+    width: 60%;
+}
+
+.index-body {
+    background-image: url(../img/fondo-Equal-Bank.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.index-container {
+    margin-top: 10%;
+}
+
+.rounded-5 {
+    border-radius: 10px;
+}
+
+.singIn {
+    background: #FF914D;
+}
+
+ul{
+    color: white;
+}
