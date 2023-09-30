@@ -1,6 +1,6 @@
 package com.francogaldame.equalbank.dtos;
 
-import com.mindhub.homebanking.models.Loan;
+import com.francogaldame.equalbank.models.Loan;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;

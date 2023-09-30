@@ -1,8 +1,8 @@
 package com.francogaldame.equalbank.dtos;
 
-import com.mindhub.homebanking.models.Card;
-import com.mindhub.homebanking.models.CardColor;
-import com.mindhub.homebanking.models.CardType;
+import com.francogaldame.equalbank.models.Card;
+import com.francogaldame.equalbank.models.CardColor;
+import com.francogaldame.equalbank.models.CardType;
 
 import java.time.LocalDate;
 

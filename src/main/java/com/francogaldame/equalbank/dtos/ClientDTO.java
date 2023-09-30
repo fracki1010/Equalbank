@@ -1,6 +1,7 @@
 package com.francogaldame.equalbank.dtos;
 
-import com.mindhub.homebanking.models.Client;
+
+import com.francogaldame.equalbank.models.Client;
 
 import java.util.HashSet;
 import java.util.Set;

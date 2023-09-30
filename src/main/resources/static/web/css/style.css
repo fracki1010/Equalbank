@@ -1,90 +1,93 @@
-* {
-    margin: 0px;
-    padding: 0px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    box-sizing: border-box;
+body{
+    background-position: 310% 200%;
 }
 
-.account {
-    background: #FF914D;
-    //background: linear-gradient(45deg, #ee0979, #ff6a00);
+.links:hover{
+    font-weight: bold;
+}
+
+.menu-logo{
+    width: 12rem;
+}
+
+.img-nav{
+    max-width: 100%;
+    width: 12rem;
+}
+
+
+.account{
+    background-color: #DC3545;
     color: white;
-    box-shadow: 1px 1px 5px black;
-    border-radius: 2rem;
+    font-size: 1rem;
+    border-radius: 1rem;
+    decoration: none;
 }
 
-.account:hover {
-    box-shadow: 5px 5px 15px white;
-}
-
-.account-details-header {
-    background: #FF914D;
-    //background: linear-gradient(45deg, #ee0979, #ff6a00);
-    color: white;
-}
-
-.account-balance {
-    font-size: 2em;
-    margin: 0px;
-}
-
-.account-link {
-    text-decoration: none;
-}
-
-.subtitle {
-    display: inline;
-}
-
-#create {
-    margin-bottom: 15px;
-}
-
-.credit-transaction {
-    color: green;
-}
-
-.debit-transaction {
-    color: red;
+a .card-body:hover{
+    height: 140%;
+    font-size: 3rem;
+    text-decoration: white;
+    border-radius: 1rem;
+    box-shadow: 0.5rem 0.5rem 0.5rem black;
+    transition: 0.4s;
 }
 
 .loan {
     background: linear-gradient(45deg, #ee09cf, #0026ff);
     color: white;
+    border-radius: 1rem;
 }
 
-.menu-logo {
-    width: 20rem;
-    height: 8rem;
+
+
+
+/* Animaciones de los btb nav
+----------------------------------------------------*/
+.menu{
+    display: flex;
+    justify-content: left;
 }
 
-.welcome {
-    background: black;
-    //background: linear-gradient(45deg, #5573f8cc, #2d0a66);
+.menu a {
+    position: relative;
+    display: block;
+    overflow: hidden;
 }
 
-.welcome-logo {
-    width: 60%;
+.menu a span {
+    transition: transform 0.2s ease-out;
 }
 
-.index-body {
-    background-image: url(../img/fondo-Equal-Bank.jpg);
-    background-size: cover;
-    background-attachment: fixed;
+.menu a span:first-child {
+    display: inline-block;
+    padding: 10px;
 }
 
-.index-container {
-    margin-top: 10%;
+.menu a span:last-child {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(-100%);
 }
 
-.rounded-5 {
-    border-radius: 10px;
+.menu a:hover span:first-child {
+    transform: translateY(100%);
 }
 
-.singIn {
-    background: #FF914D;
+.menu a:hover span:last-child,
+.menu[data-animation] a:hover span:last-child {
+    transform: none;
 }
 
-ul{
-    color: white;
+  /* ANIMATIONS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+.menu[data-animation="to-top"] a span:last-child {
+    transform: translateY(100%);
 }
+

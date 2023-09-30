@@ -1,7 +1,7 @@
 package com.francogaldame.equalbank.services;
 
-import com.mindhub.homebanking.models.CardColor;
-import com.mindhub.homebanking.models.CardType;
+import com.francogaldame.equalbank.models.CardColor;
+import com.francogaldame.equalbank.models.CardType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.Authentication;
 

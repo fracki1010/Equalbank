@@ -10,11 +10,11 @@ Vue.createApp({
         getData: function () {
             axios.get("/api/clients/current")
                 .then((response) => {
-                    //get client ifo
+                    //obtiene los datos del cliente actual y autenticado
                     this.clientInfo = response.data;
                 })
                 .catch((error) => {
-                    // handle error
+                    // Por si no hay un cliente autenticado y no obtiene nada
                     this.errorMsg = "Error getting data";
                     this.errorToats.show();
                 })

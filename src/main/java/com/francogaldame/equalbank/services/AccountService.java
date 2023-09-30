@@ -1,7 +1,7 @@
 package com.francogaldame.equalbank.services;
 
-import com.mindhub.homebanking.dtos.AccountDTO;
-import com.mindhub.homebanking.models.Client;
+import com.francogaldame.equalbank.dtos.AccountDTO;
+import com.francogaldame.equalbank.models.Client;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.Authentication;
 

@@ -1,8 +1,7 @@
 package com.francogaldame.equalbank.repositories;
 
-import com.mindhub.homebanking.models.Card;
-import com.mindhub.homebanking.models.CardType;
-import com.mindhub.homebanking.models.Client;
+import com.francogaldame.equalbank.models.Card;
+import com.francogaldame.equalbank.models.Client;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Set;

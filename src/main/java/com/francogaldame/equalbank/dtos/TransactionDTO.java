@@ -1,7 +1,7 @@
 package com.francogaldame.equalbank.dtos;
 
-import com.mindhub.homebanking.models.Transaction;
-import com.mindhub.homebanking.models.TransactionType;
+import com.francogaldame.equalbank.models.Transaction;
+import com.francogaldame.equalbank.models.TransactionType;
 
 import java.time.LocalDate;
 

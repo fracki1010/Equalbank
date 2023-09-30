@@ -1,13 +1,13 @@
 package com.francogaldame.equalbank.services.implement;
 
-import com.mindhub.homebanking.models.Card;
-import com.mindhub.homebanking.models.CardColor;
-import com.mindhub.homebanking.models.CardType;
-import com.mindhub.homebanking.models.Client;
-import com.mindhub.homebanking.repositories.CardRepository;
-import com.mindhub.homebanking.repositories.ClientRepository;
-import com.mindhub.homebanking.services.CardService;
-import com.mindhub.homebanking.utils.CardUtils;
+import com.francogaldame.equalbank.models.Card;
+import com.francogaldame.equalbank.models.CardColor;
+import com.francogaldame.equalbank.models.CardType;
+import com.francogaldame.equalbank.models.Client;
+import com.francogaldame.equalbank.repositories.CardRepository;
+import com.francogaldame.equalbank.repositories.ClientRepository;
+import com.francogaldame.equalbank.services.CardService;
+import com.francogaldame.equalbank.utils.CardUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

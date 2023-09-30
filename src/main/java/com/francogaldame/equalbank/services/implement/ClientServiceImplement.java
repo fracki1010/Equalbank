@@ -1,11 +1,11 @@
 package com.francogaldame.equalbank.services.implement;
 
-import com.mindhub.homebanking.dtos.ClientDTO;
-import com.mindhub.homebanking.models.Account;
-import com.mindhub.homebanking.models.Client;
-import com.mindhub.homebanking.repositories.AccountRepository;
-import com.mindhub.homebanking.repositories.ClientRepository;
-import com.mindhub.homebanking.services.ClientService;
+import com.francogaldame.equalbank.dtos.ClientDTO;
+import com.francogaldame.equalbank.models.Account;
+import com.francogaldame.equalbank.models.Client;
+import com.francogaldame.equalbank.repositories.AccountRepository;
+import com.francogaldame.equalbank.repositories.ClientRepository;
+import com.francogaldame.equalbank.services.ClientService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

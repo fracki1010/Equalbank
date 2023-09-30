@@ -1,8 +1,8 @@
 package com.francogaldame.equalbank.configurations;
 
 
-import com.mindhub.homebanking.models.Client;
-import com.mindhub.homebanking.repositories.ClientRepository;
+import com.francogaldame.equalbank.models.Client;
+import com.francogaldame.equalbank.repositories.ClientRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

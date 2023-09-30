@@ -1,7 +1,7 @@
 package com.francogaldame.equalbank.controllers;
 
 
-import com.mindhub.homebanking.services.TransactionService;
+import com.francogaldame.equalbank.services.TransactionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.Authentication;
