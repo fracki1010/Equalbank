@@ -1,6 +1,9 @@
 Vue.createApp({
     data() {
         return {
+            clientInfo: [],
+            errorToats: null,
+            errorMsg: null,
             loanTypes: [],
             loanTypeId: 0,
             payments: 0,
@@ -14,6 +17,18 @@ Vue.createApp({
         }
     },
     methods: {
+        getDataClient: function () {
+            axios.get("/api/clients/current")
+                 .then((response) => {
+                        //obtiene los datos del cliente actual y autenticado
+                        this.clientInfo = response.data;
+                 })
+                 .catch((error) => {
+                        // Por si no hay un cliente autenticado y no obtiene nada
+                        this.errorMsg = "Error getting data";
+                        this.errorToats.show();
+                 })
+            },
         getData: function () {
             Promise.all([axios.get("/api/loans"), axios.get("/api/clients/current/accounts")])
                 .then((response) => {
@@ -90,5 +105,6 @@ Vue.createApp({
         this.okmodal = new bootstrap.Modal(document.getElementById('okModal'));
         this.feesmodal = new bootstrap.Modal(document.getElementById('feesModal'));
         this.getData();
+        this.getDataClient();
     }
 }).mount('#app')

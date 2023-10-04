@@ -97,7 +97,7 @@ public class CardServiceImplement implements CardService {
 
 
         //Creacion de tarjeta
-        Card card = new Card(client.getFirstName() + " " + client.getLastname(),
+        Card card = new Card(client.getFirstName() + " " + client.getLastName(),
                 cardType,
                 cardColor,
                 numberCard,

@@ -43,8 +43,8 @@ public class WebAuthorization{
                 .antMatchers(HttpMethod.GET, "/api/clients/**").hasAuthority("ADMIN")
                 .antMatchers("/web/accounts.html").hasAnyAuthority("CLIENT","ADMIN")
                 .antMatchers("/rest/**").hasAuthority("ADMIN")
-                .antMatchers("/api/clients").hasAuthority("ADMIN")
-                .anyRequest().denyAll();
+                .antMatchers("/api/clients").hasAuthority("ADMIN");
+               /* .anyRequest().denyAll();*/
 
         http.formLogin()
                 .usernameParameter("email")

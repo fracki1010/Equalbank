@@ -15,6 +15,7 @@ body{
     width: 12rem;
 }
 
+/*accounts*/
 
 .account{
     background-color: #DC3545;
@@ -39,6 +40,20 @@ a .card-body:hover{
     border-radius: 1rem;
 }
 
+.dropdown-menu[data-bs-popper] {
+    left: -5rem;
+}
+
+
+@media (max-width: 768px){
+.dropdown-menu[data-bs-popper] {
+    left: 0rem;
+}
+}
+
+nav-user:hover{
+
+}
 
 
 

@@ -10,7 +10,7 @@ import java.util.stream.Collectors;
 public class ClientDTO {
     private Long id;
     private String firstName;
-    private String lastname;
+    private String lastName;
     private String email;
     private Set<AccountDTO> accounts = new HashSet<>();
     private Set<ClientLoanDTO> loans = new HashSet<>();
@@ -20,7 +20,7 @@ public class ClientDTO {
     public ClientDTO(Client client) {
         this.id = client.getId();
         this.firstName = client.getFirstName();
-        this.lastname = client.getLastname();
+        this.lastName = client.getLastName();
         this.email = client.getEmail();
         this.accounts = client
                             .getAccounts()
@@ -47,8 +47,8 @@ public class ClientDTO {
         return firstName;
     }
 
-    public String getLastname() {
-        return lastname;
+    public String getLastName() {
+        return lastName;
     }
 
     public String getEmail() {

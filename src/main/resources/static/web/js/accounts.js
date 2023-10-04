@@ -30,7 +30,7 @@ Vue.createApp({
                     this.errorToats.show();
                 })
         },
-        create: function () {
+        createCard: function () {
             axios.post('/api/clients/current/accounts')
                 .then(response => window.location.reload())
                 .catch((error) => {

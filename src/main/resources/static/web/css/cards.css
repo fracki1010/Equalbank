@@ -62,8 +62,7 @@
 }
 
 .plastic-card__logo {
-	width: 40px;
-	height: 20px;
+	width: 6rem;
 }
 
 .plastic-card__front-logo {
@@ -165,4 +164,10 @@
 .plastic-card:hover .plastic-card__back {
 	-webkit-transform: rotateY(0deg);
 	-moz-transform: rotateY(0deg);
+}
+
+.container-card{
+    background-image: url(../img/bank1.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
 }

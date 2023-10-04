@@ -3,6 +3,8 @@ Vue.createApp({
         return {
             clientAccounts: [],
             clientAccountsTo: [],
+            clientInfo: [],
+            creditCards: [],
             debitCards: [],
             errorToats: null,
             errorMsg: null,
@@ -14,6 +16,18 @@ Vue.createApp({
         }
     },
     methods: {
+        getDataClient: function () {
+            axios.get("/api/clients/current")
+                .then((response) => {
+                    //obtiene los datos del cliente actual y autenticado
+                    this.clientInfo = response.data;
+                })
+                .catch((error) => {
+                    // Por si no hay un cliente autenticado y no obtiene nada
+                    this.errorMsg = "Error getting data";
+                    this.errorToats.show();
+                })
+        },
         getData: function () {
             axios.get("/api/clients/current/accounts")
                 .then((response) => {
@@ -61,6 +75,7 @@ Vue.createApp({
                 .catch((error) => {
                     this.errorMsg = error.response.data;
                     this.errorToats.show();
+                    this.errorMsg = "This account does not have that amount"
                 })
         },
         changedType: function () {
@@ -90,5 +105,6 @@ Vue.createApp({
         this.modal = new bootstrap.Modal(document.getElementById('confirModal'));
         this.okmodal = new bootstrap.Modal(document.getElementById('okModal'));
         this.getData();
+        this.getDataClient();
     }
 }).mount('#app')
