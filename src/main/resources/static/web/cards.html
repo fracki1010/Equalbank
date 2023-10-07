@@ -113,14 +113,14 @@
                 <h2 class="display-6 subtitle">Debit Cards
                     <a v-if="clientInfo.cards != null && clientInfo.cards.length < 6" href="create-cards.html"
                        id="create" class="btn btn-sm btn-success">Create</a>
-                    <div v-if="debitCards.length <= 0">
-                        <span class="small">No debit cards</span>
-                    </div>
                 </h2>
             </div>
         </div>
         <div class="ps-5">
             <div class="row p-4 rounded border border-dark container-fluid">
+                <div v-if="debitCards.length <= 0">
+                    <span class="small">No debit cards</span>
+                </div>
                 <div v-for="card in debitCards" class="plastic-card col-12 col-md-3 mt-2 me-2">
                     <div v-bind:class="['plastic-card__front', 'plastic-card__part', card.color.toLowerCase() +'-plastic-card']">
                         <div class="plastic-card__square">
@@ -156,11 +156,11 @@
         <div class="row mt-3">
             <div class="col">
                 <h2 class="display-6">Credit Cards</h2>
-                <span class="small" v-if="creditCards.length <= 0">No credit cards</span>
             </div>
         </div>
         <div class="ps-5 pb-2">
             <div class="row p-4 rounded border border-dark container-fluid" >
+                <span class="small" v-if="creditCards.length <= 0">No credit cards</span>
                 <div v-for="card in creditCards" class="plastic-card col-12 col-md-3 mt-2 me-2">
                     <div v-bind:class="['plastic-card__front', 'plastic-card__part', card.color.toLowerCase() +'-plastic-card']">
                         <div class="plastic-card__square">

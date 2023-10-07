@@ -55,10 +55,32 @@ nav-user:hover{
 
 }
 
-.loans{
-    height: 80%;
+.profile{
+    height: 10rem;
 }
 
+.container{
+    border-radius:1rem;
+}
+
+
+
+.account-balance {
+    font-size: 2em;
+    margin: 0px;
+}
+
+.account-link {
+    text-decoration: none;
+}
+
+.credit-transaction {
+    color: green;
+}
+
+.debit-transaction {
+    color: red;
+}
 
 
 /* Animaciones de los btb nav

@@ -74,9 +74,10 @@ public class EqualbankApplication <commandLineRunner> {
 
 			//Creacion de prestamos
 
-			Loan loan1 = new Loan("Hipotecario", 500000, List.of(12, 24, 36, 48, 60));
-			Loan loan2 = new Loan("Personal", 100000, List.of(6, 12, 24));
-			Loan loan3 = new Loan("Automotriz", 300000, List.of(12, 24, 36));
+			Loan loan1 = new Loan("Hipotecario", 5000000, List.of(12, 24, 36, 48, 60));
+			Loan loan2 = new Loan("Personal", 1000000, List.of(6, 12, 24));
+			Loan loan3 = new Loan("Automotriz", 7000000, List.of(12, 24, 36));
+			Loan loan4 = new Loan("Empresario", 9000000, List.of(6, 12));
 
 			loanRepository.save(loan1);
 			loanRepository.save(loan2);

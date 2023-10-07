@@ -1,12 +1,25 @@
 Vue.createApp({
     data() {
         return {
+            clientInfo: [],
             accountInfo: {},
             errorToats: null,
             errorMsg: null,
         }
     },
     methods: {
+        getDataClient: function () {
+            axios.get("/api/clients/current")
+                .then((response) => {
+                    //obtiene los datos del cliente actual y autenticado
+                    this.clientInfo = response.data;
+                })
+                .catch((error) => {
+                    // Por si no hay un cliente autenticado y no obtiene nada
+                    this.errorMsg = "Error getting data";
+                    this.errorToats.show();
+                })
+        },
         getData: function () {
             const urlParams = new URLSearchParams(window.location.search);
             const id = urlParams.get('id');
@@ -37,5 +50,6 @@ Vue.createApp({
     mounted: function () {
         this.errorToats = new bootstrap.Toast(document.getElementById('danger-toast'));
         this.getData();
+        this.getDataClient();
     }
 }).mount('#app')

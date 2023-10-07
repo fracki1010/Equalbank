@@ -1,13 +1,26 @@
 Vue.createApp({
     data() {
         return {
+            clientInfo: [],
             errorToats: null,
             errorMsg: null,
-            cardType: "none",
-            cardColor: "none",
+            cardType: "DEBIT",
+            cardColor: "SILVER",
         }
     },
     methods: {
+        getDataClient: function () {
+            axios.get("/api/clients/current")
+                 .then((response) => {
+                        //obtiene los datos del cliente actual y autenticado
+                        this.clientInfo = response.data;
+                 })
+                 .catch((error) => {
+                        // Por si no hay un cliente autenticado y no obtiene nada
+                        this.errorMsg = "Error getting data";
+                        this.errorToats.show();
+                 })
+        },
         formatDate: function (date) {
             return new Date(date).toLocaleDateString('en-gb');
         },
@@ -41,5 +54,6 @@ Vue.createApp({
     },
     mounted: function () {
         this.errorToats = new bootstrap.Toast(document.getElementById('danger-toast'));
+        this.getDataClient();
     }
 }).mount('#app')
